@@ -1,0 +1,16 @@
+<div class="container py-5">
+    <div class="row text-center text-white">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="display-4">Gifs</h1>
+            <p class="lead mb-0">Busqueda de gifs usando la API</p>
+        </div>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+    <div *ngFor="let gif of resultados" class="col">
+        <div class="card">
+            <img [src]="gif.images.fixed_height.url" [alt]="gif.title" class="img-fluid shadow rounded">
+        </div>
+    </div>
+</div>
